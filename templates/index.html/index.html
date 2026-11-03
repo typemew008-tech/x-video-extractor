@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#101114">
+  <title>X 视频提取器</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <main class="shell">
+    <div class="brand"><span class="logo">𝕏</span><span>VIDEO EXTRACTOR</span></div>
+    <section class="card">
+      <div class="eyebrow">简单 · 快速 · 高清</div>
+      <h1>提取 X 视频</h1>
+      <p class="intro">粘贴公开推文链接，解析视频并选择清晰度下载。</p>
+      <form id="form">
+        <label for="url">X 视频分享链接</label>
+        <div class="input-wrap">
+          <input id="url" type="url" placeholder="https://x.com/用户名/status/..." autocomplete="url" required>
+          <button type="button" id="paste" class="paste">粘贴</button>
+        </div>
+        <button id="extract" class="primary" type="submit">提取视频 <span>→</span></button>
+      </form>
+      <div id="status" class="status" aria-live="polite"></div>
+      <section id="result" class="result" hidden>
+        <div class="preview-wrap"><video id="preview" controls playsinline></video></div>
+        <div class="video-title" id="videoTitle"></div>
+        <label for="quality">选择视频清晰度</label>
+        <select id="quality"></select>
+        <button id="download" class="primary" type="button">下载 MP4 <span>↓</span></button>
+      </section>
+    </section>
+    <p class="foot">仅支持可公开访问的 X / Twitter 视频推文。请尊重原作者版权及平台规则。</p>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>
